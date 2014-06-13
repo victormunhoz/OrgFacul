@@ -33,12 +33,19 @@
 - (IBAction)circleCreate:(id)sender {
     
  
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(grow:)];
     CircleView *circleView = [[CircleView alloc]init];
+    [circleView addGestureRecognizer:tap];
+    
     [[self view]addSubview:circleView];
     [[self circleArray]addObject:circleView];
 
      [self drawLines];
     
+}
+- (void)highlightLetter:(UITapGestureRecognizer*)sender {
+    UIView *view = sender.view;
+    NSLog(@"%d", view.tag);//By tag, you can find out where you had typed.
 }
 
 
@@ -67,5 +74,20 @@
     
     
 
+}
+
+-(void)grow:(UITapGestureRecognizer*)sender {
+    UIView *view = sender.view;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        if (view.layer.cornerRadius == 50) {
+            view.layer.cornerRadius = 25;
+            [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, 50, 50)];
+        }else{
+            [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, 100, 100)];
+            view.layer.cornerRadius = 50;
+        }
+    }];
+    
 }
 @end
