@@ -20,6 +20,7 @@
 		16C4585019917E210014C7BB /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C4584D19917E210014C7BB /* ECSlidingViewController.m */; };
 		16C4585119917E210014C7BB /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C4584F19917E210014C7BB /* UIImage+ImageWithUIView.m */; };
 		16C4585419917E970014C7BB /* SlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C4585319917E970014C7BB /* SlidingViewController.m */; };
+		AD16650919953E1E007ED5E0 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD16650819953E1E007ED5E0 /* StatusViewController.m */; };
 		B702B07719902B8600635F46 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B702B07619902B8600635F46 /* testViewController.m */; };
 		B71E5F3A199011380057524D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71E5F39199011380057524D /* Foundation.framework */; };
 		B71E5F3C199011380057524D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71E5F3B199011380057524D /* CoreGraphics.framework */; };
@@ -77,6 +78,8 @@
 		16C4584F19917E210014C7BB /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
 		16C4585219917E970014C7BB /* SlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingViewController.h; sourceTree = "<group>"; };
 		16C4585319917E970014C7BB /* SlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingViewController.m; sourceTree = "<group>"; };
+		AD16650719953E1E007ED5E0 /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = PodFiles/StatusViewController.h; sourceTree = "<group>"; };
+		AD16650819953E1E007ED5E0 /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusViewController.m; path = PodFiles/StatusViewController.m; sourceTree = "<group>"; };
 		B702B07519902B8600635F46 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = ../testViewController.h; sourceTree = "<group>"; };
 		B702B07619902B8600635F46 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = ../testViewController.m; sourceTree = "<group>"; };
 		B71E5F36199011380057524D /* Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +148,7 @@
 		162E153A19929DC800383BF8 /* ListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				162E15411992BCC600383BF8 /* PodFiles */,
+				162E15411992BCC600383BF8 /* SWCell */,
 				162E153619929AC800383BF8 /* MenuFilter */,
 				16C4585219917E970014C7BB /* SlidingViewController.h */,
 				16C4585319917E970014C7BB /* SlidingViewController.m */,
@@ -159,7 +162,7 @@
 			name = ListViewController;
 			sourceTree = "<group>";
 		};
-		162E15411992BCC600383BF8 /* PodFiles */ = {
+		162E15411992BCC600383BF8 /* SWCell */ = {
 			isa = PBXGroup;
 			children = (
 				162E15421992BCC600383BF8 /* NSMutableArray+SWUtilityButtons.h */,
@@ -175,6 +178,7 @@
 				162E154C1992BCC600383BF8 /* SWUtilityButtonView.h */,
 				162E154D1992BCC600383BF8 /* SWUtilityButtonView.m */,
 			);
+			name = SWCell;
 			path = PodFiles;
 			sourceTree = "<group>";
 		};
@@ -215,6 +219,8 @@
 			children = (
 				162E153A19929DC800383BF8 /* ListViewController */,
 				B71E5F6E199011660057524D /* Main.storyboard */,
+				AD16650719953E1E007ED5E0 /* StatusViewController.h */,
+				AD16650819953E1E007ED5E0 /* StatusViewController.m */,
 				B702B07519902B8600635F46 /* testViewController.h */,
 				B702B07619902B8600635F46 /* testViewController.m */,
 				B76E0F9219914AB300A934C0 /* GerenciadorBD.h */,
@@ -355,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD16650919953E1E007ED5E0 /* StatusViewController.m in Sources */,
 				162E15401992BCB400383BF8 /* TasksTableViewCell.m in Sources */,
 				B76E0F9419914AB300A934C0 /* GerenciadorBD.m in Sources */,
 				B702B07719902B8600635F46 /* testViewController.m in Sources */,

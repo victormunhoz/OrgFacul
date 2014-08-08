@@ -80,25 +80,25 @@
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
-}
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return YES;
+//}
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        
-        [GerenciadorBD deletaTarefa:[self.taskList objectAtIndex:indexPath.row]];
-        [self.taskList removeObjectAtIndex:indexPath.row];
-        
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        // Delete the row from the data source
+//        
+//        [GerenciadorBD deletaTarefa:[self.taskList objectAtIndex:indexPath.row]];
+//        [self.taskList removeObjectAtIndex:indexPath.row];
+//        
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        
+//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//    }
+//}
 
 - (void)menuFilterViewControllerDidFinishWithCategoryId:(NSString*)categoryId
 {
@@ -136,7 +136,7 @@
         {
             [GerenciadorBD deletaTarefa:[self.taskList objectAtIndex:cellIndexPath.row]];
             
-            [self.taskList removeObjectAtIndex:index];
+            [self.taskList removeObjectAtIndex:cellIndexPath.row];
             [[self tableView]deleteRowsAtIndexPaths:@[cellIndexPath] withRowAnimation:UITableViewRowAnimationRight];
 
             NSLog(@"teste botao menu 2");
