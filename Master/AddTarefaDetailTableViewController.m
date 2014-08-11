@@ -47,6 +47,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -57,7 +58,12 @@
     [super viewDidLoad];
     self.datePicker.minimumDate = [[ NSDate alloc ] initWithTimeIntervalSinceNow: (NSTimeInterval) 5 ];
     NSLog(@"%@",categoria);
+    
+    
 }
+
+
+
 - (IBAction)dateSwitchTap:(id)sender {
     if(self.dateSwitch.on){
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

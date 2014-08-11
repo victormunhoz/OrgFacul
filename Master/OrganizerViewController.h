@@ -12,6 +12,7 @@
 #import "ECSlidingViewController.h"
 #import "GerenciadorBD.h"
 #import "TasksTableViewCell.h"
+#import "TaskListColor.h"
 
 @interface OrganizerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MenuFilterViewControllerDelegate, SWTableViewCellDelegate>
 
@@ -19,5 +20,7 @@
 
 @property NSMutableArray *taskList;
 @property NSString *taskCategory;
+
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

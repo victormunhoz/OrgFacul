@@ -23,6 +23,20 @@
 		208F6DBE199466E500ECBD6A /* AddTarefaDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208F6DBD199466E500ECBD6A /* AddTarefaDetailTableViewController.m */; };
 		20A57C6A199341A10061BD39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A57C69199341A10061BD39 /* Main.storyboard */; };
 		20B6F04A1995C0BD007982DD /* Tarefa.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B6F0491995C0BD007982DD /* Tarefa.m */; };
+		ADB09ECA1997D43E005E3009 /* NewTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB09EC91997D43E005E3009 /* NewTypeViewController.m */; };
+		ADB09ECC1997D782005E3009 /* behind_alert_view.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ECB1997D782005E3009 /* behind_alert_view.png */; };
+		ADB09EDA19994CF0005E3009 /* cellDelete_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ECF19994CF0005E3009 /* cellDelete_icon.png */; };
+		ADB09EDB19994CF0005E3009 /* cellEditar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ED019994CF0005E3009 /* cellEditar_icon.png */; };
+		ADB09EDC19994CF0005E3009 /* cellPronto_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ED119994CF0005E3009 /* cellPronto_icon.png */; };
+		ADB09EDD19994CF0005E3009 /* estudo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ED219994CF0005E3009 /* estudo_icon.png */; };
+		ADB09EDF19994CF0005E3009 /* novaCate_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ED419994CF0005E3009 /* novaCate_icon.png */; };
+		ADB09EE019994CF0005E3009 /* prova_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ED519994CF0005E3009 /* prova_icon.png */; };
+		ADB09EE119994CF0005E3009 /* tabLista_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ED619994CF0005E3009 /* tabLista_icon.png */; };
+		ADB09EE319994CF0005E3009 /* tabShare_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09ED819994CF0005E3009 /* tabShare_icon.png */; };
+		ADB09EE719995187005E3009 /* TaskListColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB09EE619995187005E3009 /* TaskListColor.m */; };
+		ADB09EEB19995B98005E3009 /* filtro_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09EE819995B98005E3009 /* filtro_icon.png */; };
+		ADB09EEC19995B98005E3009 /* tabNew_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09EE919995B98005E3009 /* tabNew_icon.png */; };
+		ADB09EED19995B98005E3009 /* trabalho_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB09EEA19995B98005E3009 /* trabalho_icon.png */; };
 		B71E5F3A199011380057524D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71E5F39199011380057524D /* Foundation.framework */; };
 		B71E5F3C199011380057524D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71E5F3B199011380057524D /* CoreGraphics.framework */; };
 		B71E5F3E199011380057524D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71E5F3D199011380057524D /* UIKit.framework */; };
@@ -85,6 +99,22 @@
 		20A57C69199341A10061BD39 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		20B6F0481995C0BD007982DD /* Tarefa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tarefa.h; sourceTree = "<group>"; };
 		20B6F0491995C0BD007982DD /* Tarefa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tarefa.m; sourceTree = "<group>"; };
+		ADB09EC81997D43E005E3009 /* NewTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTypeViewController.h; sourceTree = "<group>"; };
+		ADB09EC91997D43E005E3009 /* NewTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTypeViewController.m; sourceTree = "<group>"; };
+		ADB09ECB1997D782005E3009 /* behind_alert_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = behind_alert_view.png; sourceTree = "<group>"; };
+		ADB09ECF19994CF0005E3009 /* cellDelete_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellDelete_icon.png; sourceTree = "<group>"; };
+		ADB09ED019994CF0005E3009 /* cellEditar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellEditar_icon.png; sourceTree = "<group>"; };
+		ADB09ED119994CF0005E3009 /* cellPronto_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellPronto_icon.png; sourceTree = "<group>"; };
+		ADB09ED219994CF0005E3009 /* estudo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estudo_icon.png; sourceTree = "<group>"; };
+		ADB09ED419994CF0005E3009 /* novaCate_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = novaCate_icon.png; sourceTree = "<group>"; };
+		ADB09ED519994CF0005E3009 /* prova_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prova_icon.png; sourceTree = "<group>"; };
+		ADB09ED619994CF0005E3009 /* tabLista_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabLista_icon.png; sourceTree = "<group>"; };
+		ADB09ED819994CF0005E3009 /* tabShare_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabShare_icon.png; sourceTree = "<group>"; };
+		ADB09EE519995187005E3009 /* TaskListColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListColor.h; sourceTree = "<group>"; };
+		ADB09EE619995187005E3009 /* TaskListColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListColor.m; sourceTree = "<group>"; };
+		ADB09EE819995B98005E3009 /* filtro_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filtro_icon.png; path = ../../filtro_icon.png; sourceTree = "<group>"; };
+		ADB09EE919995B98005E3009 /* tabNew_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabNew_icon.png; path = ../../tabNew_icon.png; sourceTree = "<group>"; };
+		ADB09EEA19995B98005E3009 /* trabalho_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trabalho_icon.png; path = ../../trabalho_icon.png; sourceTree = "<group>"; };
 		B71E5F36199011380057524D /* Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71E5F39199011380057524D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B71E5F3B199011380057524D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +176,8 @@
 				2027209B1995C41E009F4250 /* SlidingViewController.m */,
 				2027209C1995C41E009F4250 /* OrganizerViewController.h */,
 				2027209D1995C41E009F4250 /* OrganizerViewController.m */,
+				ADB09EE519995187005E3009 /* TaskListColor.h */,
+				ADB09EE619995187005E3009 /* TaskListColor.m */,
 				2027209E1995C41E009F4250 /* MenuFilterViewController.h */,
 				202720A01995C41E009F4250 /* MenuFilterViewController.m */,
 				2027209F1995C41E009F4250 /* TasksTableViewCell.h */,
@@ -184,6 +216,33 @@
 			name = SWCell;
 			sourceTree = "<group>";
 		};
+		ADB09ECD1997D795005E3009 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				ADB09ECE19994CF0005E3009 /* final */,
+				ADB09ECB1997D782005E3009 /* behind_alert_view.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		ADB09ECE19994CF0005E3009 /* final */ = {
+			isa = PBXGroup;
+			children = (
+				ADB09EE819995B98005E3009 /* filtro_icon.png */,
+				ADB09EE919995B98005E3009 /* tabNew_icon.png */,
+				ADB09EEA19995B98005E3009 /* trabalho_icon.png */,
+				ADB09ECF19994CF0005E3009 /* cellDelete_icon.png */,
+				ADB09ED019994CF0005E3009 /* cellEditar_icon.png */,
+				ADB09ED119994CF0005E3009 /* cellPronto_icon.png */,
+				ADB09ED219994CF0005E3009 /* estudo_icon.png */,
+				ADB09ED419994CF0005E3009 /* novaCate_icon.png */,
+				ADB09ED519994CF0005E3009 /* prova_icon.png */,
+				ADB09ED619994CF0005E3009 /* tabLista_icon.png */,
+				ADB09ED819994CF0005E3009 /* tabShare_icon.png */,
+			);
+			path = final;
+			sourceTree = "<group>";
+		};
 		B71E5F2D199011380057524D = {
 			isa = PBXGroup;
 			children = (
@@ -219,9 +278,12 @@
 			isa = PBXGroup;
 			children = (
 				20A57C69199341A10061BD39 /* Main.storyboard */,
+				ADB09ECD1997D795005E3009 /* images */,
 				202720991995C405009F4250 /* ListViewController */,
 				B746E0C41992C40D00AC2D93 /* CategoriasBT.h */,
 				B746E0C51992C40D00AC2D93 /* CategoriasBT.m */,
+				ADB09EC81997D43E005E3009 /* NewTypeViewController.h */,
+				ADB09EC91997D43E005E3009 /* NewTypeViewController.m */,
 				208F6DBC199466E500ECBD6A /* AddTarefaDetailTableViewController.h */,
 				208F6DBD199466E500ECBD6A /* AddTarefaDetailTableViewController.m */,
 				200DE0EC1991EF5A0018B56B /* AddTarefaViewController.h */,
@@ -345,9 +407,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB09EDC19994CF0005E3009 /* cellPronto_icon.png in Resources */,
+				ADB09EDA19994CF0005E3009 /* cellDelete_icon.png in Resources */,
+				ADB09EE319994CF0005E3009 /* tabShare_icon.png in Resources */,
+				ADB09EEC19995B98005E3009 /* tabNew_icon.png in Resources */,
+				ADB09EEB19995B98005E3009 /* filtro_icon.png in Resources */,
+				ADB09EDB19994CF0005E3009 /* cellEditar_icon.png in Resources */,
 				20A57C6A199341A10061BD39 /* Main.storyboard in Resources */,
+				ADB09EE119994CF0005E3009 /* tabLista_icon.png in Resources */,
 				B71E5F46199011380057524D /* InfoPlist.strings in Resources */,
+				ADB09EDF19994CF0005E3009 /* novaCate_icon.png in Resources */,
 				B71E5F51199011380057524D /* Images.xcassets in Resources */,
+				ADB09EED19995B98005E3009 /* trabalho_icon.png in Resources */,
+				ADB09EE019994CF0005E3009 /* prova_icon.png in Resources */,
+				ADB09EDD19994CF0005E3009 /* estudo_icon.png in Resources */,
+				ADB09ECC1997D782005E3009 /* behind_alert_view.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB09EE719995187005E3009 /* TaskListColor.m in Sources */,
 				202720AC1995C438009F4250 /* UIImage+ImageWithUIView.m in Sources */,
 				200DE0EE1991EF5A0018B56B /* AddTarefaViewController.m in Sources */,
 				202720BE1995C450009F4250 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
@@ -387,6 +462,7 @@
 				202720A21995C41E009F4250 /* SlidingViewController.m in Sources */,
 				202720A41995C41E009F4250 /* MenuFilterViewController.m in Sources */,
 				202720BB1995C450009F4250 /* SWCellScrollView.m in Sources */,
+				ADB09ECA1997D43E005E3009 /* NewTypeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

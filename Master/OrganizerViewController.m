@@ -19,7 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //[[self view]setBackgroundColor:[UIColor colorWithRed:99 green:99 blue:99 alpha:1.0]];
 }
+
+
 
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -93,6 +98,8 @@
     [cell.textLabel setText:[[self.taskList objectAtIndex:indexPath.row]valueForKey:@"titulo"]];
     cell.delegate = self;
     
+    cell.backgroundColor = [TaskListColor RGBbyNumber:indexPath.row AndTotal:_taskList.count];
+    
     return cell;
 }
 
@@ -118,6 +125,8 @@
 
 - (void)menuFilterViewControllerDidFinishWithCategoryId:(NSString*)categoryId
 {
+    [[self titleLabel]setText:categoryId];
+    
     if([categoryId isEqualToString:@"Todas"]){
         self.taskList = [GerenciadorBD getTarefas];
         [self.tableView reloadData];
@@ -126,6 +135,7 @@
         //faz uma busca com a categoria selecionada
         self.taskList = [GerenciadorBD getTarefasType:categoryId];
         [self.tableView reloadData];
+        
     }
     
     // resetar a possicao dessa view para o topo

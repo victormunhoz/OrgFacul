@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>64A9726F-ABFE-4E93-9B93-044611FC8791</string>
+	<key>IDESourceControlProjectName</key>
+	<string>master</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1A467464-EC49-44A7-80B8-AC34BBABACB3</key>
+		<string>https://github.com/victormunhoz/OrgFacul.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>master.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1A467464-EC49-44A7-80B8-AC34BBABACB3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/victormunhoz/OrgFacul.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1A467464-EC49-44A7-80B8-AC34BBABACB3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1A467464-EC49-44A7-80B8-AC34BBABACB3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OrgFacul</string>
+		</dict>
+	</array>
+</dict>
+</plist>

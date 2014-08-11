@@ -111,6 +111,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setModalPresentationStyle:UIModalPresentationCurrentContext];
+    
     //inits e Allocs
     self.customTipos = [[NSMutableArray alloc] init];
     self.buttonArray = [[NSMutableArray alloc] init];
