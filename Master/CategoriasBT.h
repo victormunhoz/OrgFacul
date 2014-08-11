@@ -10,13 +10,15 @@
 #import "GerenciadorBD.h"
 
 @protocol CategoriasBTDelegate
--(void)didRemoveCategoria;
+-(void)didRemoveCategoria:(NSManagedObject *) objetoAdeletar;
 @end
 
 @interface CategoriasBT : UIButton
 
 @property (nonatomic, assign) id delegate;
 @property NSManagedObject* dbobject;
+@property UIButton *removeBT;
+
 
 @end
 

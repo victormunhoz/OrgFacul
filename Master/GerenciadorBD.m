@@ -104,9 +104,7 @@
     
     NSMutableArray* typesStrings;
     for(int i=0; i<types.count; i++){
-        NSLog(@"asdasd");
         [typesStrings addObject:[[types objectAtIndex:i] valueForKey:@"nome"]];
-        NSLog(@"%@",[[types objectAtIndex:i] valueForKey:@"nome"]);
     }
     
     return types;

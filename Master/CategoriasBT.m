@@ -21,6 +21,12 @@
         [longPress setMinimumPressDuration:1.5];
         [self addGestureRecognizer:longPress];
         
+        self.removeBT = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+        [self.removeBT setBackgroundColor:[UIColor redColor]];
+        [self.removeBT addTarget:self action:@selector(removeBTtap) forControlEvents:UIControlEventTouchUpInside];
+        [self.removeBT setHidden:YES];
+        [self addSubview:self.removeBT];
+        
     }
     return self;
 }
@@ -28,7 +34,7 @@
 - (void)longPress:(UILongPressGestureRecognizer*)gesture {
     if (gesture.state != UIGestureRecognizerStateEnded) {
        
-        [self showRemoveBT];
+        [self.removeBT setHidden:NO];
         
         
     }
@@ -37,18 +43,10 @@
     }
 }
 
--(void)showRemoveBT {
-    UIButton *removeBT = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    [removeBT setBackgroundColor:[UIColor redColor]];
-    [removeBT addTarget:self action:@selector(removeBTtap) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:removeBT];
-}
-
+//aciona o delegate para o tratamento ser feito na superview
 -(void)removeBTtap{
     NSLog(@"removido");
-    [GerenciadorBD deletaType:self.dbobject];
-    [self removeFromSuperview];
-     [self.delegate didRemoveCategoria];
+    [self.delegate didRemoveCategoria:self.dbobject];
   
 }
 

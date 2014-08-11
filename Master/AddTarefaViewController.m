@@ -69,6 +69,7 @@
         [self.addCustomBT setFrame:[[self.frames objectAtIndex:i] CGRectValue]];
         [self.view addSubview:self.addCustomBT];
     }
+    
 }
 -(void)customBTtap: (id)sender{
     CategoriasBT* referenciaBT = sender;
@@ -93,21 +94,38 @@
     
     
     [self adicionaCustom];
+    
+    for(int i = 0; i<self.buttonArray.count;i++){
+        [[[self.buttonArray objectAtIndex:i] removeBT] setHidden:YES];
+    }
 }
 //delegate do botao customizado
--(void)didRemoveCategoria{
-    
-    [self.addCustomBT removeFromSuperview];
-    [self limpaERecria];
+-(void)didRemoveCategoria:(NSManagedObject *)objetoAdeletar{
+    [self.alertaConfirmacao show];
+    self.tempDelTipo = objetoAdeletar;
 }
-
+//alerta de confirmacao para deletar
+-(void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 1){
+        
+        [GerenciadorBD deletaType:self.tempDelTipo];
+        [self limpaERecria];
+        self.tempDelTipo = nil;
+        
+    }
+    else{
+        self.tempDelTipo = nil;
+    }
+}
 -(void)addCustomTipoBTtap: (id)sender{
     [self.textInput setHidden:NO];
     [self.okBT setHidden:NO];
     [self.textInput becomeFirstResponder];
 
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [self limpaERecria];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -115,6 +133,9 @@
     self.customTipos = [[NSMutableArray alloc] init];
     self.buttonArray = [[NSMutableArray alloc] init];
     self.addCustomBT=[[UIButton alloc] init];
+    
+    [self setAlertaConfirmacao:[[UIAlertView alloc] initWithTitle:@"Você tem Certeza?" message:@"Isto deletara as tarefas desta categoria permanentemente" delegate:self cancelButtonTitle:@"Cancelar" otherButtonTitles:@"Ok",nil]];
+    
     [self criaFrames];
     
     //Configura o botao de Adcionar categoria
@@ -124,6 +145,7 @@
     
     [self limpaERecria];
 }
+
 
 - (IBAction)okBTTap:(id)sender {
     if(self.customTipos.count <5 ){
@@ -138,7 +160,6 @@
         self.textInput.text = nil;
     }
 }
-
 
 - (void)didReceiveMemoryWarning
 {
