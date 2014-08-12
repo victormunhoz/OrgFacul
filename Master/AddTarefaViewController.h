@@ -11,11 +11,13 @@
 #import "CategoriasBT.h"
 #import "AddTarefaDetailTableViewController.h"
 
-@interface AddTarefaViewController : UIViewController <CategoriasBTDelegate>
+@interface AddTarefaViewController : UIViewController <CategoriasBTDelegate,UIAlertViewDelegate>
 
 @property NSMutableArray *customTipos;
 @property (weak, nonatomic) IBOutlet UITextField *textInput;
 @property (weak, nonatomic) IBOutlet UIButton *okBT;
+@property UIAlertView *alertaConfirmacao;
+@property NSManagedObject *tempDelTipo;
 @property UIButton* addCustomBT;
 
 

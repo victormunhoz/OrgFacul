@@ -5,19 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>64A9726F-ABFE-4E93-9B93-044611FC8791</string>
+=======
+	<string>1BEC6AC7-5656-40D7-98A1-C1642A144CD9</string>
+>>>>>>> origin/icaroBranch
 	<key>IDESourceControlProjectName</key>
 	<string>master</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>1A467464-EC49-44A7-80B8-AC34BBABACB3</key>
+=======
+		<key>B851F9A2-F28F-488D-8212-D8B1190C57FD</key>
+>>>>>>> origin/icaroBranch
 		<string>https://github.com/victormunhoz/OrgFacul.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>master.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>1A467464-EC49-44A7-80B8-AC34BBABACB3</key>
+=======
+		<key>B851F9A2-F28F-488D-8212-D8B1190C57FD</key>
+>>>>>>> origin/icaroBranch
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +37,22 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
 	<string>1A467464-EC49-44A7-80B8-AC34BBABACB3</string>
+=======
+	<string>B851F9A2-F28F-488D-8212-D8B1190C57FD</string>
+>>>>>>> origin/icaroBranch
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>1A467464-EC49-44A7-80B8-AC34BBABACB3</string>
+=======
+			<string>B851F9A2-F28F-488D-8212-D8B1190C57FD</string>
+>>>>>>> origin/icaroBranch
 			<key>IDESourceControlWCCName</key>
 			<string>OrgFacul</string>
 		</dict>

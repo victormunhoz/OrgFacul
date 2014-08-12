@@ -29,7 +29,6 @@
         [newTarefa setDataCriacao:[[NSDate alloc] initWithTimeIntervalSinceNow:0]];
         NSNumber *notifyIndex = [NSNumber numberWithInteger:self.notifySegment.selectedSegmentIndex];
         [newTarefa setNotificacao:notifyIndex];
-        NSLog(@"entrou");
         
         if(self.dateSwitch.on){
             [newTarefa setDataFinal:self.datePicker.date];
@@ -57,9 +56,12 @@
 {
     [super viewDidLoad];
     self.datePicker.minimumDate = [[ NSDate alloc ] initWithTimeIntervalSinceNow: (NSTimeInterval) 5 ];
+<<<<<<< HEAD
     NSLog(@"%@",categoria);
     
     
+=======
+>>>>>>> origin/icaroBranch
 }
 
 
