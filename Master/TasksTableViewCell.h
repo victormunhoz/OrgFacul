@@ -11,6 +11,8 @@
 
 @interface TasksTableViewCell : SWTableViewCell
 
+@property NSManagedObject *tarefa;
 + (NSArray *)rightButtons;
++ (NSArray *)rightButtons2;
 
 @end

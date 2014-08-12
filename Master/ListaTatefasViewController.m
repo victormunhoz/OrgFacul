@@ -36,7 +36,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    _exibitionTasks = [[NSMutableArray alloc]initWithArray:[GerenciadorBD getTarefas]];
+    self.exibitionTasks = [[NSMutableArray alloc]initWithArray:[GerenciadorBD getTarefas]];
     //NSLog(@"%i",[_exibitionTasks count]);
     
 
@@ -61,7 +61,7 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [_exibitionTasks count];
+    return [self.exibitionTasks count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,7 +76,7 @@
     // Configure the cell...
     //cell.textLabel.text = _txtTest[indexPath.row];
     
-    [cell.textLabel setText:[[_exibitionTasks objectAtIndex:indexPath.row]valueForKey:@"titulo"]];
+    [cell.textLabel setText:[[self.exibitionTasks objectAtIndex:indexPath.row]valueForKey:@"titulo"]];
     
     return cell;
 }

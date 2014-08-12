@@ -41,15 +41,15 @@
 {
     [super viewWillAppear:animated];
     
-    self.taskList = [GerenciadorBD getTarefas];
-    //INCOMPLETO
+    self.taskList = [GerenciadorBD getTarefasIncompletas];
+    [self.titleLabel setText:@"Todas"];
     
     [GerenciadorBD getTypes];
     
     self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuFilter"];
     
     //passa a lista de categorias
-    NSMutableArray *categorias = [[NSMutableArray alloc] initWithObjects:@"Todas",@"Prova",@"Trabalho",@"Estudo", nil];
+    NSMutableArray *categorias = [[NSMutableArray alloc] initWithObjects:@"Todas",@"Completas",@"Prova",@"Trabalho",@"Estudo", nil];
     [categorias addObjectsFromArray:[[GerenciadorBD getTypes] valueForKey:@"nome"]];
     [(MenuFilterViewController *)self.slidingViewController.underLeftViewController setCategoryList:categorias];
     
@@ -93,42 +93,37 @@
     static NSString *CellIdentifier = @"Cell";
     TasksTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.rightUtilityButtons = [TasksTableViewCell rightButtons];
+    int completada = [[[self.taskList objectAtIndex:indexPath.row] valueForKey:@"completada"] integerValue];
     
-    [cell.textLabel setText:[[self.taskList objectAtIndex:indexPath.row]valueForKey:@"titulo"]];
-    cell.delegate = self;
+    if(completada == 1){
+        cell.rightUtilityButtons = [TasksTableViewCell rightButtons2];
+    
+        [cell.textLabel setText:[[self.taskList objectAtIndex:indexPath.row]valueForKey:@"titulo"]];
+        cell.delegate = self;
+    }
+    else{
+        cell.rightUtilityButtons = [TasksTableViewCell rightButtons];
+        
+        [cell.textLabel setText:[[self.taskList objectAtIndex:indexPath.row]valueForKey:@"titulo"]];
+        cell.delegate = self;
+    }
     
     cell.backgroundColor = [TaskListColor RGBbyNumber:indexPath.row AndTotal:_taskList.count];
     
     return cell;
 }
 
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return YES;
-//}
-
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        // Delete the row from the data source
-//        
-//        [GerenciadorBD deletaTarefa:[self.taskList objectAtIndex:indexPath.row]];
-//        [self.taskList removeObjectAtIndex:indexPath.row];
-//        
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//        
-//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//    }
-//}
-
 - (void)menuFilterViewControllerDidFinishWithCategoryId:(NSString*)categoryId
 {
     [[self titleLabel]setText:categoryId];
     
     if([categoryId isEqualToString:@"Todas"]){
-        self.taskList = [GerenciadorBD getTarefas];
+        self.taskList = [GerenciadorBD getTarefasIncompletas];
+        [self.tableView reloadData];
+        NSLog(@"todas");
+    }
+    else if([categoryId isEqualToString:@"Completas"]){
+        self.taskList = [GerenciadorBD getTarefasCompletas];
         [self.tableView reloadData];
     }
     else{
@@ -137,6 +132,7 @@
         [self.tableView reloadData];
         
     }
+    
     
     // resetar a possicao dessa view para o topo
     [self.slidingViewController resetTopView];
@@ -154,10 +150,10 @@
     
     switch (index) {
         case 0:
-            [self.taskList removeObjectAtIndex:index];
-            [[self tableView]deleteRowsAtIndexPaths:@[cellIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [GerenciadorBD completaTarefa:[self.taskList objectAtIndex:cellIndexPath.row]];
+            [self.tableView reloadData];
 
-            NSLog(@"More button was pressed");
+            NSLog(@"comp button was pressed");
             break;
         case 1:
         {

@@ -15,6 +15,10 @@
 +(void)deletaTarefa: (id)tarefaAdeletar;
 +(void)criaTarefa:(Tarefa *)tarefa;
 +(NSMutableArray *)getTarefasType:(NSString *)tipo;
++(NSMutableArray *)getTarefasCompletas;
++(NSMutableArray *)getTarefasIncompletas;
+
++(void)completaTarefa:(NSManagedObject *)tarefa;
 
 +(void)criaType:(NSString *)name;
 +(NSMutableArray *)getTypes;

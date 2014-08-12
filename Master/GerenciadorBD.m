@@ -21,6 +21,7 @@
     return context;
 }
 
+//Cria Tarefa no banco
 +(void)criaTarefa:(Tarefa *)tarefa{
     //Cria novo ManagedObject
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -34,7 +35,8 @@
     [newTarefa setValue:tarefa.dataFinal forKey:@"dataFinal"];
     [newTarefa setValue:tarefa.notificacao forKey:@"notificacao"];
     [newTarefa setValue:tarefa.prioridade forKey:@"prioridade"];
-    //NSLog(@"%@",[newTarefa valueForKey:@"titulo"]);
+    [newTarefa setValue:[NSNumber numberWithBool:NO] forKey:@"completada"];
+    //NSLog(@"%@",[newTarefa valueForKey:@"completada"]);
     
     NSError *error = nil;
     if (![context save:&error]) {
@@ -42,6 +44,7 @@
     }
 }
 
+//Deleta tarefa do banco
 +(void)deletaTarefa: (id)tarefaAdeletar{
     // Delete object from database
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -56,29 +59,77 @@
     }
 }
 
+//Recebe as tarefas do banco
 +(NSMutableArray *)getTarefas{
     NSMutableArray *tarefas;
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Tarefa"];
     tarefas = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
+    NSLog(@"tem %i",tarefas.count);
     return tarefas;
 }
 
+//pega todas as tarefas Incompletas
++(NSMutableArray *)getTarefasIncompletas{
+    
+    NSMutableArray *tasks;
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Tarefa"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"completada == %@",[NSNumber numberWithBool:NO]];
+    [fetchRequest setPredicate:predicate];
+    
+    tasks = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
+    return  tasks;
+}
+
+//pega todas as tarefas completas
++(NSMutableArray *)getTarefasCompletas{
+    
+    NSMutableArray *tasks;
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Tarefa"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"completada == %@", [NSNumber numberWithBool:YES]];
+    [fetchRequest setPredicate:predicate];
+    
+    tasks = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
+    
+    return  tasks;
+}
+
+//Recebe as tarefas pelo tipo especifico, somente as incompletas
 +(NSMutableArray *)getTarefasType: (NSString *)tipo{
-    // Fetch the musicas from persistent data store
     
     NSMutableArray *tasksType;
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Tarefa"];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"tipo == %@", tipo];
-    [fetchRequest setPredicate:predicate];
+    NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"completada == %@",[NSNumber numberWithBool:NO]];
+    NSPredicate *compPredic = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:predicate,predicate2, nil]];
+    [fetchRequest setPredicate:compPredic];
     
     tasksType = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     
+    
     return  tasksType;
 }
+
+
++(void)completaTarefa:(NSManagedObject *)tarefa{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    [tarefa setValue:[NSNumber numberWithBool:YES] forKey:@"completada"];
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        //NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+        return;
+    }
+    
+}
+
 
 //Tipos customizados
 

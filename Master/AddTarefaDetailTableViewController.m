@@ -56,12 +56,8 @@
 {
     [super viewDidLoad];
     self.datePicker.minimumDate = [[ NSDate alloc ] initWithTimeIntervalSinceNow: (NSTimeInterval) 5 ];
-<<<<<<< HEAD
     NSLog(@"%@",categoria);
-    
-    
-=======
->>>>>>> origin/icaroBranch
+
 }
 
 
@@ -141,7 +137,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)viewDidDisappear:(BOOL)animated{
+}
 
 /*
 #pragma mark - Navigation

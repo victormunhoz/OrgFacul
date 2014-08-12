@@ -17,5 +17,6 @@
 @synthesize notificacao;
 @synthesize dataCriacao;
 @synthesize dataFinal;
+@synthesize completada;
 
 @end

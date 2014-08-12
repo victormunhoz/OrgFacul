@@ -17,5 +17,7 @@
 @property NSNumber *notificacao;
 @property NSDate *dataCriacao;
 @property NSDate *dataFinal;
+@property NSNumber * completada;
+
 
 @end
