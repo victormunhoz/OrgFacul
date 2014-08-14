@@ -57,7 +57,6 @@
 		B71E5F5B199011380057524D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71E5F3F199011380057524D /* CoreData.framework */; };
 		B71E5F63199011380057524D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B71E5F61199011380057524D /* InfoPlist.strings */; };
 		B71E5F65199011380057524D /* MasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B71E5F64199011380057524D /* MasterTests.m */; };
-		B71E5F75199012500057524D /* ListaTatefasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B71E5F74199012500057524D /* ListaTatefasViewController.m */; };
 		B746E0C61992C40D00AC2D93 /* CategoriasBT.m in Sources */ = {isa = PBXBuildFile; fileRef = B746E0C51992C40D00AC2D93 /* CategoriasBT.m */; };
 		B76E0F9419914AB300A934C0 /* GerenciadorBD.m in Sources */ = {isa = PBXBuildFile; fileRef = B76E0F9319914AB300A934C0 /* GerenciadorBD.m */; };
 /* End PBXBuildFile section */
@@ -145,8 +144,6 @@
 		B71E5F60199011380057524D /* MasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MasterTests-Info.plist"; sourceTree = "<group>"; };
 		B71E5F62199011380057524D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B71E5F64199011380057524D /* MasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterTests.m; sourceTree = "<group>"; };
-		B71E5F73199012500057524D /* ListaTatefasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaTatefasViewController.h; sourceTree = "<group>"; };
-		B71E5F74199012500057524D /* ListaTatefasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaTatefasViewController.m; sourceTree = "<group>"; };
 		B746E0C41992C40D00AC2D93 /* CategoriasBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriasBT.h; sourceTree = "<group>"; };
 		B746E0C51992C40D00AC2D93 /* CategoriasBT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriasBT.m; sourceTree = "<group>"; };
 		B76E0F9219914AB300A934C0 /* GerenciadorBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorBD.h; sourceTree = "<group>"; };
@@ -325,8 +322,6 @@
 				AD01EC4B199A9F320051D08C /* StatusViewController.m */,
 				B76E0F9219914AB300A934C0 /* GerenciadorBD.h */,
 				B76E0F9319914AB300A934C0 /* GerenciadorBD.m */,
-				B71E5F73199012500057524D /* ListaTatefasViewController.h */,
-				B71E5F74199012500057524D /* ListaTatefasViewController.m */,
 				B71E5F4A199011380057524D /* AppDelegate.h */,
 				B71E5F4B199011380057524D /* AppDelegate.m */,
 				B71E5F50199011380057524D /* Images.xcassets */,
@@ -490,7 +485,6 @@
 				AD01EC4C199A9F320051D08C /* StatusViewController.m in Sources */,
 				B71E5F4C199011380057524D /* AppDelegate.m in Sources */,
 				202720BD1995C450009F4250 /* SWTableViewCell.m in Sources */,
-				B71E5F75199012500057524D /* ListaTatefasViewController.m in Sources */,
 				208F6DBE199466E500ECBD6A /* AddTarefaDetailTableViewController.m in Sources */,
 				B71E5F48199011380057524D /* main.m in Sources */,
 				AD388908199D2EAD00581441 /* Master.xcdatamodeld in Sources */,

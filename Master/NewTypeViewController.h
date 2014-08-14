@@ -12,7 +12,7 @@
 
 @protocol NewTypeDelegate;
 
-@interface NewTypeViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate>
+@interface NewTypeViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIAlertViewDelegate, UITextFieldDelegate>
 
 //label para receber o nome da nova categoria
 @property (strong, nonatomic) IBOutlet UITextField *typeNameLaber;
@@ -28,6 +28,10 @@
 
 //Recebe a imagem selecionada
 @property NSMutableArray *imageTypePick;
+//alert para criar tarefa sem nome
+@property UIAlertView *typeAlert;
+
+@property UIAlertView *conflitTypeAlert;
 
 @property (nonatomic, weak) id <NewTypeDelegate> delegate;
 

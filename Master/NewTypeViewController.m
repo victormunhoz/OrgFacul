@@ -34,7 +34,7 @@
     
     _dbTypes = [GerenciadorBD getTypes];
     
-    
+    [self setTypeAlert:[[UIAlertView alloc] initWithTitle:@"Sem Nome" message:@"Sua categoria só pode ser criada com um nome" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil]];
     
     [[self typeNameLaber]resignFirstResponder];
     [[self typeNameLaber]setDelegate:self];
@@ -84,12 +84,22 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.contentView.backgroundColor = [UIColor greenColor];
+    
     [[self imageTypePick]removeAllObjects];
     
     [[self imageTypePick]addObject:[[self iconsArray]objectAtIndex:indexPath.row]];
     
     NSLog(@"%i",_imageTypePick.count);
     
+}
+
+
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.contentView.backgroundColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,10 +134,28 @@
                 NSLog(@"Dismiss Type View completed");
             }];
         }
+        else if (([self.typeNameLaber.text isEqual:@"Prova"]) || ([self.typeNameLaber.text isEqual:@"Estudo"]) || ([self.typeNameLaber.text isEqual:@"Trabalho"]) || ([self.typeNameLaber.text isEqual:@"Todas"]) || ([self.typeNameLaber.text isEqual:@"Compartilhada"])){
+            
+            
+            
+        }
+        else{
+            [[self typeAlert]show];
+        }
     }
 }
 
-  
+-(void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 1){
+        
+       
+        
+    }
+    else{
+        
+    }
+}
+
 
 - (IBAction)cancelType:(id)sender {
     [self.delegate limpaERecria];
